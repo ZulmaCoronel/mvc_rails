@@ -4,7 +4,7 @@
 
 <table class="table table-bordered"> 
   <thead>
-    <tr>
+    <tr class="danger">
       <th>Nombre producto</th>
       <th>Precio</th>
       <th colspan="3"></th>
@@ -13,7 +13,7 @@
 
   <tbody>
     <% @productos.each do |producto| %>
-      <tr>
+      <tr class="success">
         <td><%= producto.nombre_producto %></td>
         <td><%= producto.precio %></td>
         <td><%= link_to 'Show', producto %></td>

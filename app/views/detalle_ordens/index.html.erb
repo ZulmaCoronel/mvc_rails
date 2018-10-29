@@ -1,10 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Detalle Ordens</h1>
+<h1>Detalle Orden</h1>
 
 <table class="table table-bordered">
   <thead>
-    <tr>
+    <tr class="danger">
       <th>Cantidad</th>
       <th>Precio venta</th>
       <th colspan="3"></th>
@@ -13,7 +13,7 @@
 
   <tbody valign="top">
     <% @detalle_ordens.each do |detalle_orden| %>
-      <tr>
+      <tr class="success">
         <td><%= detalle_orden.cantidad %></td>
         <td><%= detalle_orden.precio_venta %></td>
         <td><%= link_to 'Show', detalle_orden %></td>

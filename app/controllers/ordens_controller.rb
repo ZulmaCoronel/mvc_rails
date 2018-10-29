@@ -24,7 +24,8 @@ class OrdensController < ApplicationController
   # POST /ordens
   # POST /ordens.json
   def create
-    @orden = Orden.new(orden_params)
+    params[:orden].permit! #para permitir el acceso de las peticiones de ordenes
+    @orden = Orden.new(params[:orden])
 
     respond_to do |format|
       if @orden.save
